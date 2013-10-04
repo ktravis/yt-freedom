@@ -16,6 +16,7 @@ function go_forth(id) {
 		video = true;		
 	}
 	$("#info").fadeOut(450, complete);
+	$(".footer").fadeOut(450);
 }
 
 function change_url(id) {
@@ -42,9 +43,13 @@ $(document).ready(function () {
     		$p.css("width", $(window).width());
     		$p.css("height", $(window).height());
     		$("#hotzone").hide();
+    		$(".footer").hide();
 		} else {
+			$(".footer").show();
 			$p.removeClass("fullscreen");
-			if (video) $("#hotzone").show();
+			if (video) {
+				$("#hotzone").show();
+			}
 		}
 	});
 
@@ -75,7 +80,9 @@ $(document).ready(function () {
 	});
 
 	$("#container").on("mouseover", function () {
-		if (video) $("#return").fadeIn(200);
+		if (video) {
+			$("#return").fadeIn(200);
+		}
 	});
 	$("#container").on("mouseleave", function () {
 		$("#return").fadeOut(300);
