@@ -43,9 +43,7 @@ $(document).ready(function () {
     		$p.css("width", $(window).width());
     		$p.css("height", $(window).height());
     		$("#hotzone").hide();
-    		$(".footer").hide();
 		} else {
-			$(".footer").show();
 			$p.removeClass("fullscreen");
 			if (video) {
 				$("#hotzone").show();
